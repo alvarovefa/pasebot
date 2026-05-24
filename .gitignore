@@ -1,0 +1,15 @@
+# Carpetas de dependencias
+node_modules/
+dist/
+.vite/
+
+# Archivos de configuración local y credenciales (¡MUY IMPORTANTE!)
+.env
+.env.local
+
+# Datos de la base de datos de Docker
+/db_data/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
