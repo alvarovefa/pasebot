@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://alvarovefa.github.io/pasebot",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite --host 0.0.0.0 --port 3000",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "react": "^19.2.6",
