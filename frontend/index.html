@@ -1,13 +1,297 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceo Polivalente de Molina | Innovación y Futuro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <div class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
+        <nav class="max-w-7xl mx-auto bg-slate-900/80 backdrop-blur-md text-white rounded-2xl shadow-xl border border-white/10 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3 cursor-pointer" id="logo-inicio">
+            <div class="h-14 w-14 rounded-full overflow-hidden border-2 border-amber-400/60 shadow-lg shadow-amber-400/20 flex items-center justify-center bg-slate-950">
+                <img src="./public/logo-lpm.jpg" alt="Logo Liceo" class="h-full w-full object-cover scale-105">
+            </div>
+            <span class="font-black text-lg tracking-wider uppercase text-amber-400">LPM</span>
+        </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide items-center">
+                <a href="#inicio" class="section-link hover:text-amber-400 transition-colors">Inicio</a>
+                <a href="#eventos" class="section-link hover:text-amber-400 transition-colors">Comunidad</a>
+                <a href="#sellos" class="section-link hover:text-amber-400 transition-colors">Sellos</a>
+                <a href="#docentes" class="section-link hover:text-amber-400 transition-colors">Docentes</a>
+                <a href="#redes" class="hover:text-amber-400 transition-colors">Redes</a>
+                <a href="/src/assets/RICE.pdf" target="_blank" rel="noopener noreferrer" class="border border-amber-400/40 bg-amber-400/5 hover:bg-amber-400 hover:text-slate-950 font-bold px-3 py-1.5 rounded-xl transition-all duration-300 flex items-center space-x-1.5 shadow-sm shadow-amber-400/5 hover:-translate-y-0.5">
+                    <span class="text-xs uppercase tracking-wider">Reglamento</span>
+                    <svg class="w-3.5 h-3.5 opacity-90" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+                    </svg>
+                </a>
+            </div>
+            
+        </nav>
+    </div>
+
+    <div id="view-landing" class="block">
+        
+        <section id="inicio" class="pt-32 pb-16 flex items-center bg-gradient-to-br bg-slate-950 text-white relative overflow-hidden">
+            <div class="absolute top-1/4 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="inline-block bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-blue-500/30">
+                        Educación Pública de Vanguardia
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none text-slate-100">
+                        Liceo Polivalente <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r bg-amber-400 to-orange-400">de Molina</span>
+                    </h1>
+                    <p class="text-lg text-slate-400 max-w-xl font-medium">
+                        Rompiendo esquemas tradicionales. Formamos profesionales técnicos y científicos-humanistas preparados para liderar los desafíos del mañana.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="#eventos" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:-translate-y-1 inline-block">
+                            Explorar Eventos
+                        </a>
+                        <a href="#redes" class="border border-slate-700 hover:border-slate-500 text-slate-300 font-bold px-8 py-4 rounded-xl transition-all inline-block">
+                            Nuestras Redes
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-square bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-white/10 rotate-3 hover:rotate-0 transition-transform duration-500 group">
+                        <div class="w-full h-full bg-gradient-to-tr private bg-blue-900 to-slate-800 flex items-center justify-center p-8">
+                            <span class="text-slate-500 text-sm font-mono group-hover:text-slate-400 transition-colors">[ Foto Destacada del Liceo ]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventos" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="mb-12 text-left">
+                
+                <p class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Últimos Eventos y Actividades</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+                <div class="md:col-span-2 md:row-span-2 bg-slate-900 rounded-3xl overflow-hidden relative shadow-lg border border-slate-200 group">
+                    <div class="absolute inset-0 bg-gradient-to-t private bg-slate-950/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 bg-blue-900 flex items-center justify-center text-slate-400 text-xs font-mono">
+                        [ Foto Aniversario del Liceo ]
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 z-20 space-y-2">
+                        <span class="bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Destacado</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">Gran Celebración del Aniversario Institucional</h3>
+                        <p class="text-sm text-slate-300 max-w-md">La comunidad educativa se reunió en una jornada llena de arte, deporte y reconocimiento histórico.</p>
+                    </div>
+                </div>
+
+                <div class="md:row-span-2 private bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 p-8 flex flex-col justify-between group hover:border-blue-500 transition-all">
+                    <div class="space-y-4">
+                        <div class="h-12 w-12 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 font-bold">🏆</div>
+                        <h3 class="text-xl font-bold text-slate-900">Logro Deportivo</h3>
+                        <p class="text-sm text-slate-500">Nuestra selección de básquetbol se corona campeona regional en las olimpiadas escolares.</p>
+                    </div>
+                    <div class="h-32 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 text-xs font-mono">
+                        [ Foto Equipo ]
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 private bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 group hover:border-blue-500 transition-all">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Área Técnica</span>
+                        <h3 class="text-xl font-bold text-slate-900">Feria de Innovación y Tecnología Polivalente</h3>
+                        <p class="text-sm text-slate-500">Estudiantes de las especialidades técnicas presentaron proyectos de automatización.</p>
+                    </div>
+                    <div class="h-full w-full md:w-48 bg-slate-100 rounded-xl flex-shrink-0 flex items-center justify-center text-slate-400 text-xs font-mono">
+                        [ Foto Proyectos ]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sellos" class="py-24 bg-white px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center max-w-xl mx-auto">
+                    <p class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Oferta Académica</p>
+                    <p class="text-slate-500 font-medium text-sm md:text-base">
+                        Nuestra formación polivalente equilibra el desarrollo intelectual superior con las competencias técnicas requeridas por el sector productivo.
+                    </p>
+                </div>
+
+                <div class="space-y-16">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-slate-100 pb-2">
+                            <span class="text-slate-400 font-mono text-xs uppercase tracking-wider">Fase Inicial</span>
+                            <h3 class="text-xl font-bold text-slate-800">1º y 2º Año Medio</h3>
+                        </div>
+                        <div class="private bg-slate-50 p-8 rounded-2xl border border-slate-200/60 max-w-2xl group hover:border-blue-500/40 transition-colors">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-2xl p-3 bg-white rounded-xl shadow-sm">🧠</div>
+                                <div class="space-y-1">
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Científico - Humanista (Plan Común)</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">
+                                        Enfoque centrado en la exploración de las ciencias básicas, matemáticas, lenguaje, artes y humanidades, sentando bases sólidas para la elección vocacional definitiva.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-slate-100 pb-2">
+                            <span class="text-slate-400 font-mono text-xs uppercase tracking-wider">Diferenciación</span>
+                            <h3 class="text-xl font-bold text-slate-800">3º y 4º Año Medio (Especialidades)</h3>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="private bg-slate-50 p-6 rounded-2xl border border-slate-200/60 flex flex-col justify-between group hover:bg-slate-900 hover:border-slate-900 transition-all duration-300 hover:-translate-y-1">
+                                <div class="space-y-3">
+                                    <div class="text-xl p-3 bg-white rounded-xl shadow-sm inline-block group-hover:bg-slate-800">🍳</div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-white transition-colors">Gastronomía</h4>
+                                    <p class="text-sm text-slate-500 group-hover:text-slate-400 leading-relaxed">
+                                        Mención cocina y repostería. Formamos técnicos con altos estándares de higiene, gestión de insumos e innovación culinaria.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="private bg-slate-50 p-6 rounded-2xl border border-slate-200/60 flex flex-col justify-between group hover:bg-slate-900 hover:border-slate-900 transition-all duration-300 hover:-translate-y-1">
+                                <div class="space-y-3">
+                                    <div class="text-xl p-3 bg-white rounded-xl shadow-sm inline-block group-hover:bg-slate-800">🩺</div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-white transition-colors">Enfermería</h4>
+                                    <p class="text-sm text-slate-500 group-hover:text-slate-400 leading-relaxed">
+                                        Atención de enfermería con mención hospitalaria y comunitaria. Enfoque ético, humano y con fuerte base científica y clínica.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="private bg-slate-50 p-6 rounded-2xl border border-slate-200/60 flex flex-col justify-between group hover:bg-slate-900 hover:border-slate-900 transition-all duration-300 hover:-translate-y-1">
+                                <div class="space-y-3">
+                                    <div class="text-xl p-3 bg-white rounded-xl shadow-sm inline-block group-hover:bg-slate-800">📊</div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-white transition-colors">Contabilidad</h4>
+                                    <p class="text-sm text-slate-500 group-hover:text-slate-400 leading-relaxed">
+                                        Desarrollo de competencias en auditoría, tributación digital, análisis financiero y normativas contables vigentes en el país.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="private bg-slate-50 p-6 rounded-2xl border border-slate-200/60 flex flex-col justify-between group hover:bg-slate-900 hover:border-slate-900 transition-all duration-300 hover:-translate-y-1">
+                                <div class="space-y-3">
+                                    <div class="text-xl p-3 bg-white rounded-xl shadow-sm inline-block group-hover:bg-slate-800">🧪</div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-white transition-colors">Química Industrial</h4>
+                                    <p class="text-sm text-slate-500 group-hover:text-slate-400 leading-relaxed">
+                                        Preparación para el control de procesos de planta, laboratorios de análisis químico y rigurosos protocolos de seguridad ambiental.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="private bg-slate-50 p-6 rounded-2xl border border-slate-200/60 flex flex-col justify-between group hover:bg-slate-900 hover:border-slate-900 transition-all duration-300 hover:-translate-y-1">
+                                <div class="space-y-3">
+                                    <div class="text-xl p-3 bg-white rounded-xl shadow-sm inline-block group-hover:bg-slate-800">📚</div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-white transition-colors">Científico - Humanista</h4>
+                                    <p class="text-sm text-slate-500 group-hover:text-slate-400 leading-relaxed">
+                                        Plan diferenciado con profundización académica intensiva orientado al ingreso a la educación superior universitaria e institutos profesionales.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="docentes" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="mb-16 text-center max-w-xl mx-auto">
+         
+            <p class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Cuerpo Docente</p>
+            <p class="text-slate-500 font-medium text-sm md:text-base">
+                Profesionales comprometidos con la excelencia académica y el desarrollo integral de los estudiantes de Molina.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200/60 p-6 text-center group hover:border-blue-500 transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-tr private bg-blue-600 to-amber-400 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-md group-hover:scale-105 transition-transform">👨‍🍳</div>
+                <h3 class="text-lg font-bold text-slate-950">Marianela</h3>
+                <p class="text-xs font-mono text-blue-600 font-semibold uppercase tracking-wider mb-2">Gastronomía</p>
+                <p class="text-xs text-slate-500 leading-relaxed">Especialista en alta cocina internacional y gestión de inocuidad alimentaria.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200/60 p-6 text-center group hover:border-blue-500 transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-tr private bg-blue-600 to-amber-400 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-md group-hover:scale-105 transition-transform">👩‍⚕️</div>
+                <h3 class="text-lg font-bold text-slate-950">Carolina</h3>
+                <p class="text-xs font-mono text-blue-600 font-semibold uppercase tracking-wider mb-2">Enfermería</p>
+                <p class="text-xs text-slate-500 leading-relaxed">Enfermera Universitaria dedicada al desarrollo de competencias clínicas y comunitarias.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200/60 p-6 text-center group hover:border-blue-500 transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-tr private bg-blue-600 to-amber-400 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-md group-hover:scale-105 transition-transform">📐</div>
+                <h3 class="text-lg font-bold text-slate-950">Manu</h3>
+                <p class="text-xs font-mono text-blue-600 font-semibold uppercase tracking-wider mb-2">Matemáticas y Ciencias</p>
+                <p class="text-xs text-slate-500 leading-relaxed">Profesor de ciencias exactas enfocado en la preparación de la educación superior.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200/60 p-6 text-center group hover:border-blue-500 transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-tr private bg-blue-600 to-amber-400 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-md group-hover:scale-105 transition-transform">💼</div>
+                <h3 class="text-lg font-bold text-slate-950">Gabriel</h3>
+                <p class="text-xs font-mono text-blue-600 font-semibold uppercase tracking-wider mb-2">Contabilidad</p>
+                <p class="text-xs text-slate-500 leading-relaxed">Auditora con mención en tributación digital y sistemas ERP aplicados.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="redes" class="bg-slate-950 text-slate-400 pt-20 pb-10 border-t border-slate-900 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16">
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-amber-400 rounded-full"></div>
+                        <span class="font-black text-xl tracking-wider text-slate-100 uppercase">Liceo Polivalente Molina</span>
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-sm text-slate-400">
+                        Liderando la educación pública de la comuna a través de la innovación pedagógica y la formación técnico-profesional de excelencia.
+                    </p>
+                    <div class="pt-2 text-xs font-mono text-slate-500">Molina, Región del Maule, Chile.</div>
+                </div>
+
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-200">// Conecta con Nosotros</h4>
+                    <div class="flex flex-col space-y-3">
+                        <a href="https://facebook.com" target="_blank" class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 text-slate-300 hover:text-amber-400 hover:border-amber-400/30 transition-all group">
+                            <span class="text-lg group-hover:scale-110 transition-transform">📘</span>
+                            <span class="text-sm font-semibold">Facebook Institucional</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 text-slate-300 hover:text-amber-400 hover:border-amber-400/30 transition-all group">
+                            <span class="text-lg group-hover:scale-110 transition-transform">📸</span>
+                            <span class="text-sm font-semibold">Instagram Comunidad</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-200">// Navegación</h4>
+                    <ul class="space-y-2.5 text-sm font-medium">
+                        <li><button id="foot-inicio" class="hover:text-slate-200 transition-colors focus:outline-none">Volver al Inicio</button></li>
+                        <li><a href="#eventos" class="section-link hover:text-slate-200 transition-colors">Galería de Actividades</a></li>
+                        <li><a href="https://www.sii.cl" target="_blank" class="hover:text-slate-200 transition-colors">Servicios Públicos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 text-center md:flex md:justify-between md:items-center text-xs font-mono text-slate-600">
+                <p>&copy; 2026 Liceo Polivalente de Molina. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Diseñado con JavaScript & Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+  
+    <script src="./src/js/script.js"></script>
+</body>
 </html>
