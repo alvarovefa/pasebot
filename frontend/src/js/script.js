@@ -1,64 +1,59 @@
-// ==========================================
-// 🎯 CONTROLADOR DE ENRUTAMIENTO SPA
-// ==========================================
-
-// ... (tus capturas de elementos se mantienen igual) ...
-const vistaLanding = document.getElementById('view-landing');
-const vistaDocentes = document.getElementById('view-docentes');
-const btnInicio = document.getElementById('nav-inicio');
-const btnDocentes = document.getElementById('nav-docentes');
-const logoInicio = document.getElementById('logo-inicio');
-const btnFootInicio = document.getElementById('foot-inicio');
-const enlacesSecciones = document.querySelectorAll('.section-link');
-
-// 1. FUNCIÓN PARA RENDERIZAR DATOS (Añade esto aquí)
-function cargarDatosDocentes() {
-    // Si tienes lógica para traer datos de un JSON o una API, 
-    // ponla aquí. Por ahora, esto asegura que el contenedor esté listo.
-    console.log("Datos de docentes cargados o inicializados");
-}
-
-// 2. TUS FUNCIONES DE NAVEGACIÓN EXISTENTES (Sin cambios)
-function irADocentes() {
-    vistaLanding.classList.remove('block');
-    vistaLanding.classList.add('hidden');
-    vistaDocentes.classList.remove('hidden');
-    vistaDocentes.classList.add('block');
-    btnDocentes.classList.add('text-amber-400');
-    btnInicio.classList.remove('text-amber-400');
-    window.scrollTo({ top: 0, behavior: 'instant' });
-}
-
+// 1. Declaramos la función irAInicio FUERA del DOMContentLoaded si lo deseas, 
+// pero BIEN PROTEGIDA para que no rompa nada.
 function irAInicio() {
-    vistaDocentes.classList.remove('block');
-    vistaDocentes.classList.add('hidden');
-    vistaLanding.classList.remove('block'); // Aseguramos reset
-    vistaLanding.classList.remove('hidden'); // Limpieza
-    vistaLanding.classList.add('block');
-    btnInicio.classList.add('text-amber-400');
-    btnDocentes.classList.remove('text-amber-400');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+    const navLinks = document.getElementById("nav-links");
+    const menuToggle = document.getElementById("menu-toggle");
+
+    if (navLinks) {
+        navLinks.classList.remove("menu-open");
+    }
+    if (menuToggle) {
+        menuToggle.textContent = "☰";
+    }
 }
 
-// 3. EVENTO DE INICIALIZACIÓN (El cambio clave)
-document.addEventListener('DOMContentLoaded', () => {
-    // Esto se ejecuta apenas el HTML está cargado
-    cargarDatosDocentes();
+// 2. Evento principal de carga
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Datos de docentes cargados o inicializados");
+    // ... Aquí va tu lógica de docentes y otras cosas ...
+
+    // --- INTERACTIVIDAD DEL NAVBAR RESPONSIVO ---
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("menu-open");
+            
+            if (navLinks.classList.contains("menu-open")) {
+                menuToggle.textContent = "✕";
+            } else {
+                menuToggle.textContent = "☰";
+            }
+        });
+
+        // Cerrar el menú al hacer clic en cualquier link interno
+        const links = navLinks.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("menu-open");
+                menuToggle.textContent = "☰";
+            });
+        });
+    }
+
+    // --- ASIGNAR EL CLIC PARA VOLVER ARRIBA ---
+    // Busca el botón que tengas (puede ser el logo, un botón flotante, o un link del footer)
+    const btnVolverArriba = document.getElementById("btn-volver-arriba"); 
     
-    // Aquí decides qué vista mostrar al abrir
-    // Si quieres que siempre empiece en el Landing:
-    irAInicio();
-});
-
-// 4. ASIGNACIÓN DE EVENTOS (Se mantiene igual)
-if (btnDocentes) btnDocentes.addEventListener('click', irADocentes);
-if (btnInicio) btnInicio.addEventListener('click', irAInicio);
-if (logoInicio) logoInicio.addEventListener('click', irAInicio);
-if (btnFootInicio) btnFootInicio.addEventListener('click', irAInicio);
-
-enlacesSecciones.forEach(enlace => {
-    enlace.addEventListener('click', () => {
-        if (vistaLanding.classList.contains('hidden')) {
-            irAInicio();
-        }
-    });
+    if (btnVolverArriba) {
+        // OJO: Se pasa el nombre de la función SIN paréntesis 'irAInicio'. 
+        // Si pones 'irAInicio()' se ejecuta sola al cargar y causa el error.
+        btnVolverArriba.addEventListener("click", irAInicio);
+    }
 });

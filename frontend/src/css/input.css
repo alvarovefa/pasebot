@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+/* === ABSTRACCIÓN DE CLASES ADAPTADA A TAILWIND v4 === */
+@utility html-smooth {
+    @apply scroll-smooth;
+}
+
+@utility body-principal {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-500 selection:text-white;
+}
+
+/* Navbar */
+@utility navbar-fixed-container {
+    @apply fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8;
+}
+
+@utility navbar-main {
+    @apply max-w-7xl mx-auto bg-slate-900/80 backdrop-blur-md text-white rounded-2xl shadow-xl border border-white/10 px-6 py-4 flex items-center justify-between;
+}
+
+@utility logo-container {
+    @apply flex items-center space-x-3 cursor-pointer;
+}
+
+@utility logo-circular-frame {
+    @apply h-14 w-14 rounded-full overflow-hidden border-2 border-amber-400/60 shadow-lg shadow-amber-400/20 flex items-center justify-center bg-slate-950;
+}
+
+@utility logo-image {
+    @apply h-full w-full object-cover scale-105;
+}
+
+@utility logo-text {
+    @apply font-black text-lg tracking-wider uppercase text-amber-400;
+}
+
+@utility nav-links-container {
+    @apply hidden md:flex space-x-8 text-sm font-semibold tracking-wide items-center;
+}
+
+@utility nav-link {
+    @apply hover:text-amber-400 transition-colors;
+}
+
+/* Botón Reglamento */
+@utility btn-reglamento {
+    @apply border border-amber-400/40 bg-amber-400/5 hover:bg-amber-400 hover:text-slate-950 font-bold px-3 py-1.5 rounded-xl transition-all duration-300 flex items-center space-x-1.5 shadow-sm shadow-amber-400/5 hover:-translate-y-0.5;
+}
+
+@utility btn-reglamento-text {
+    @apply text-xs uppercase tracking-wider;
+}
+
+@utility btn-reglamento-icon {
+    @apply w-3.5 h-3.5 opacity-90;
+}
+
+/* Hero Section */
+@utility block-view {
+    @apply block;
+}
+
+@utility hero-section {
+    @apply pt-32 pb-16 flex items-center bg-gradient-to-br bg-slate-950 text-white relative overflow-hidden;
+}
+
+@utility blur-sphere-top {
+    @apply absolute top-1/4 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl;
+}
+
+@utility blur-sphere-bottom {
+    @apply absolute bottom-1/4 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl;
+}
+
+@utility hero-grid-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10;
+}
+
+@utility hero-text-block {
+    @apply lg:col-span-7 space-y-6 text-left;
+}
+
+@utility badge-vanguardia {
+    @apply inline-block bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-blue-500/30;
+}
+
+@utility hero-title {
+    @apply text-5xl md:text-7xl font-black tracking-tight leading-none text-slate-100;
+}
+
+@utility hero-title-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r bg-amber-400 to-orange-400;
+}
+
+@utility hero-description {
+    @apply text-lg text-slate-400 max-w-xl font-medium;
+}
+
+@utility hero-actions-container {
+    @apply pt-4 flex flex-wrap gap-4;
+}
+
+@utility btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:-translate-y-1 inline-block;
+}
+
+@utility btn-secondary {
+    @apply border border-slate-700 hover:border-slate-500 text-slate-300 font-bold px-8 py-4 rounded-xl transition-all inline-block;
+}
+/* === BLOQUE 2: HERO COMPLEMENTS & BENTO GRID EVENTS === */
+
+/* Hero Image Wrapper */
+@utility hero-image-wrapper {
+    @apply lg:col-span-5 relative;
+}
+@utility hero-card-tilt {
+    @apply aspect-square bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-white/10 rotate-3 hover:rotate-0 transition-transform duration-500 ;
+}
+@utility hero-card-inner-placeholder {
+    @apply w-full h-full bg-gradient-to-tr bg-blue-900 to-slate-800 flex items-center justify-center p-8;
+}
+@utility placeholder-text-mono {
+    @apply text-slate-500 text-sm font-mono hover:text-slate-400 transition-colors;
+}
+
+/* Estructura Base de Eventos */
+@utility events-section {
+    @apply py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+}
+@utility events-header {
+    @apply mb-12 text-left;
+}
+@utility events-title {
+    @apply text-3xl md:text-5xl font-black text-slate-900 tracking-tight;
+}
+@utility events-bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px];
+}
+
+/* Card 1: Destacado */
+@utility event-card-featured {
+    @apply md:col-span-2 md:row-span-2 bg-slate-900 rounded-3xl overflow-hidden relative shadow-lg border border-slate-200;
+}
+@utility card-overlay-gradient {
+    @apply absolute inset-0 bg-gradient-to-t bg-slate-950/80 to-transparent z-10;
+}
+@utility card-image-placeholder {
+    @apply absolute inset-0 bg-blue-900 flex items-center justify-center text-slate-400 text-xs font-mono;
+}
+@utility card-featured-content {
+    @apply absolute bottom-0 left-0 p-8 z-20 space-y-2;
+}
+@utility badge-featured-amber {
+    @apply bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase;
+}
+@utility card-title-white {
+    @apply text-2xl font-bold text-white hover:text-amber-300 transition-colors;
+}
+@utility card-desc-slate {
+    @apply text-sm text-slate-300 max-w-md;
+}
+
+/* Card 2: Vertical */
+@utility event-card-vertical {
+    @apply md:row-span-2 bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 p-8 flex flex-col justify-between hover:border-blue-500 transition-all;
+}
+@utility card-vertical-body {
+    @apply space-y-4;
+}
+@utility card-icon-amber-box {
+    @apply h-12 w-12 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 font-bold;
+}
+@utility card-inner-photo-placeholder {
+    @apply h-32 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 text-xs font-mono;
+}
+
+/* Card 3: Horizontal */
+@utility event-card-horizontal {
+    @apply md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-blue-500 transition-all;
+}
+@utility card-horizontal-text-wrapper {
+    @apply space-y-2;
+}
+@utility badge-tech-blue {
+    @apply text-xs font-bold text-blue-600 uppercase tracking-wider;
+}
+@utility card-inner-horizontal-placeholder {
+    @apply h-full w-full md:w-48 bg-slate-100 rounded-xl flex-shrink-0 flex items-center justify-center text-slate-400 text-xs font-mono;
+}
+
+/* Elementos comunes compartidos */
+@utility card-title-dark {
+    @apply text-xl font-bold text-slate-900;
+}
+@utility card-desc-muted {
+    @apply text-sm text-slate-500;
+}
+/* === BLOQUE 3: ACADEMIC OFFER & SPECIALTIES GRID === */
+
+/* Estructura de Sección */
+@utility academic-section {
+    @apply py-24 bg-white px-4 sm:px-6 lg:px-8;
+}
+@utility academic-max-container {
+    @apply max-w-7xl mx-auto;
+}
+@utility academic-header {
+    @apply mb-16 text-center max-w-xl mx-auto;
+}
+@utility academic-main-title {
+    @apply text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4;
+}
+@utility academic-subtitle {
+    @apply text-slate-500 font-medium text-sm md:text-base;
+}
+@utility academic-timeline-space {
+    @apply space-y-16;
+}
+@utility academic-stage-block {
+    @apply space-y-6;
+}
+
+/* Encabezados de Etapas */
+@utility stage-sub-header {
+    @apply flex items-center space-x-3 border-b border-slate-100 pb-2;
+}
+@utility stage-badge-mono {
+    @apply text-slate-400 font-mono text-xs uppercase tracking-wider;
+}
+@utility stage-main-title {
+    @apply text-xl font-bold text-slate-800;
+}
+
+/* Tarjeta Etapa Inicial (Ancha) */
+@utility stage-card-full {
+    @apply bg-slate-50 p-8 rounded-2xl border border-slate-200/60 max-w-2xl hover:border-blue-500/40 transition-colors;
+}
+@utility stage-card-layout {
+    @apply flex items-start space-x-4;
+}
+@utility card-emoji-box {
+    @apply text-2xl p-3 bg-white rounded-xl shadow-sm inline-block transition-colors;
+}
+@utility card-text-wrapper {
+    @apply space-y-1;
+}
+@utility card-interactive-title {
+    @apply text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors;
+}
+@utility card-interactive-desc {
+    @apply text-sm text-slate-500 leading-relaxed;
+}
+
+/* Grid de Especialidades */
+@utility specialties-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Tarjeta Individual de Especialidad (Interactiva Inversa) */
+@utility specialty-card {
+    @apply bg-slate-50 p-6 rounded-2xl border border-slate-200/60 flex flex-col justify-between transition-all duration-300 hover:bg-slate-900 hover:border-slate-900 hover:-translate-y-1;
+}
+@utility card-inner-flex {
+    @apply space-y-3;
+}
+@utility specialty-card-title {
+    @apply text-lg font-bold text-slate-900 hover:text-white transition-colors;
+}
+@utility specialty-card-desc {
+    @apply text-sm text-slate-500 hover:text-slate-400 leading-relaxed;
+}
+/* === BLOQUE 4: TEACHERS SECTION & INSTITUTIONAL FOOTER === */
+
+/* Estructura Docentes */
+@utility teachers-section {
+    @apply py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+}
+@utility teachers-header {
+    @apply mb-16 text-center max-w-xl mx-auto;
+}
+@utility teachers-main-title {
+    @apply text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4;
+}
+@utility teachers-subtitle {
+    @apply text-slate-500 font-medium text-sm md:text-base;
+}
+@utility teachers-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+/* Tarjetas de Docentes */
+@utility teacher-card {
+    @apply bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200/60 p-6 text-center hover:border-blue-500 transition-all duration-300;
+}
+@utility teacher-avatar-box {
+    @apply w-24 h-24 bg-gradient-to-tr bg-blue-600 to-amber-400 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-md hover:scale-105 transition-transform;
+}
+@utility teacher-name {
+    @apply text-lg font-bold text-slate-950;
+}
+@utility teacher-specialty {
+    @apply text-xs font-mono text-blue-600 font-semibold uppercase tracking-wider mb-2;
+}
+@utility teacher-bio {
+    @apply text-xs text-slate-500 leading-relaxed;
+}
+
+/* Estructura Base del Footer */
+@utility main-footer {
+    @apply bg-slate-950 text-slate-400 pt-20 pb-10 border-t border-slate-900 relative overflow-hidden;
+}
+@utility footer-blur-sphere {
+    @apply absolute bottom-0 left-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl;
+}
+@utility footer-max-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10;
+}
+@utility footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-12 pb-16;
+}
+
+/* Columna 1: Identidad */
+@utility footer-brand-col {
+    @apply md:col-span-5 space-y-4;
+}
+@utility footer-brand-title-flex {
+    @apply flex items-center space-x-2;
+}
+@utility brand-bullet-amber {
+    @apply h-3 w-3 bg-amber-400 rounded-full;
+}
+@utility brand-title-text {
+    @apply font-black text-xl tracking-wider text-slate-100 uppercase;
+}
+@utility brand-description-text {
+    @apply text-sm leading-relaxed max-w-sm text-slate-400;
+}
+@utility brand-location-text {
+    @apply pt-2 text-xs font-mono text-slate-500;
+}
+
+/* Columna 2: Redes Conectadas */
+@utility footer-social-col {
+    @apply md:col-span-4 space-y-4;
+}
+@utility footer-col-heading {
+    @apply text-sm font-bold uppercase tracking-widest text-slate-200;
+}
+@utility social-links-stack {
+    @apply flex flex-col space-y-3;
+}
+@utility social-card-button {
+    @apply flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 text-slate-300 hover:text-amber-400 hover:border-amber-400/30 transition-all;
+}
+@utility social-emoji {
+    @apply text-lg transition-transform;
+}
+@utility social-card-text {
+    @apply text-sm font-semibold;
+}
+
+/* Columna 3: Enlaces de Navegación */
+@utility footer-nav-col {
+    @apply md:col-span-3 space-y-4;
+}
+@utility footer-links-list {
+    @apply space-y-2.5 text-sm font-medium;
+}
+@utility footer-btn-link {
+    @apply hover:text-slate-200 transition-colors focus:outline-none cursor-pointer text-left;
+}
+@utility footer-nav-link-item {
+    @apply hover:text-slate-200 transition-colors;
+}
+/* === BLOQUE FINAL: FOOTER CLOSURE & COPYRIGHT === */
+
+@utility footer-copyright-bar {
+    @apply pt-8 border-t border-slate-900 text-center md:flex md:justify-between md:items-center text-xs font-mono text-slate-600;
+}
+/* === UTILIDAD PARA MENÚ RESPONSIVO INTERACTIVO === */
+@utility menu-open {
+    @apply !flex;
+}
