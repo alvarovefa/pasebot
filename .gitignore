@@ -1,6 +1,6 @@
 # Carpetas de dependencias
 node_modules/
-dist/
+
 .vite/
 
 # Archivos de configuración local y credenciales (¡MUY IMPORTANTE!)
